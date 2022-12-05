@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        //Java döngüler ile 0'dan girilen sayıya kadar olan sayılardan
+        // 3 ve 4'e tam bölünen sayıların ortalamasını hesaplayan programı yazınız.
+
+        int bitis1,bitis2;
+        double sayac3=0,sayac4=0;
+        int sayiadedi3=-1,sayiadedi4=-1;
+        double ort3=0,ort4=0;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("3e bölünenler için bitiş sayısını girin: ");
+        bitis1=input.nextInt();
+
+        for(int i=0;i<=bitis1;i+=3){
+            sayiadedi3++;
+            sayac3+=i;
+        }
+        ort3=sayac3/sayiadedi3;
+        System.out.println("3 e bölünenlerin ortalaması: " +ort3);
+
+        System.out.print("4e bölünen sayılar için bitiş sayısını girin: ");
+        bitis2=input.nextInt();
+
+        for (int j=0;j<=bitis2;j+=4){
+            sayiadedi4++;
+            sayac4+=j;
+        }
+        ort4=sayac4/sayiadedi4;
+        System.out.println("4 e bölünenlerin ortalaması: " +ort4);
+        
+    }
+}
